@@ -1,0 +1,25 @@
+{
+  "name": "lux-tailwind",
+  "version": "1.0.0",
+  "description": "Restructuring LUX Bazaar website using Tailwind.",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build -i src/styles.css -o public/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abodoma17/LUX-Tailwind.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abodoma17/LUX-Tailwind/issues"
+  },
+  "homepage": "https://github.com/abodoma17/LUX-Tailwind#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss-cli": "^9.0.2",
+    "tailwindcss": "^2.2.19"
+  }
+}
