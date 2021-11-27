@@ -5,10 +5,6 @@ module.exports = {
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    backgroundColor: theme => ({
-      'primary': '#0e0e0e'
-    }
-    ),
 
     screens: {
       sm: '640px',
@@ -20,7 +16,8 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-
+      
+      'primary': '#0e0e0e',
       black: colors.black,
       white: colors.white,
       gray: colors.coolGray,
