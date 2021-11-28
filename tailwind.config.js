@@ -29,6 +29,12 @@ module.exports = {
       purple: colors.violet,
       pink: colors.pink,
     },
+    shadows: {
+      'red': '0 2px 4px 0 rgba(255, 0, 0, 0.10)',
+      'green': '0 2px 4px 0 rgba(0, 255, 0, 0.10)',
+      'blue': '0 2px 4px 0 rgba(0, 0, 255, 0.10)',
+      'custom-hex-color': '0 2px 4px 0 #af9cdd',
+    },
     spacing: {
       px: '1px',
       0: '0px',
@@ -203,6 +209,8 @@ module.exports = {
       xl: ['0 20px 13px rgba(0, 0, 0, 0.03)', '0 8px 5px rgba(0, 0, 0, 0.08)'],
       '2xl': '0 25px 25px rgba(0, 0, 0, 0.15)',
       none: '0 0 #0000',
+      'card': '0 4px 8px 0 rgba(0, 0, 0, 0.5)',
+      'cardhover': '0 4px 9px 0 rgba(255, 255, 255, 0.2)',
     },
     fill: { current: 'currentColor' },
     grayscale: {
