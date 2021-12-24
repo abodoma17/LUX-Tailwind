@@ -1,74 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../../styles.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    
 </head>
-    <body>
-        <header>
-            <img src="../../../Shared/Images/logo.png" alt="" class="logo" style="width: 90px; padding-bottom: 5px;">
-            <nav>
-                <ul class="navLinks">
-                    <li><a href="../../../index.html" style="font-size: 25px;">Home</a></li>
-                    <li><a href="../../Products/View/shop.html" style="font-size: 25px;">Shop</a></li>
-                    <li><a class="active" href="aboutUs.html" style="font-size: 25px;">About</a></li>
-                </ul>
-            </nav>
-            <a href="../../Users/View/shoppingCart.html"><img src="../../../Shared/Images/shopping-cart-gold.png" alt="" style="width: 40px;"></a>
-        </header>
-        <div class="container">
-
-            <br>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d685.3094808028433!2d31.235603154607453!3d30.044225187361288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840c623362e7d%3A0xede7c66693c5f18e!2sTahrir%20Square%2C%20Cairo%20Governorate!5e0!3m2!1sen!2seg!4v1636828434360!5m2!1sen!2seg" style="width:640px; height:350px; border: 2px solid rgb(0, 0, 0);" ></iframe>
-            </div>
-            
-            <div id="infoContainer">
-                <h1 id="headerText">About Us:</h1>
-                <br><br>
-                <div id="info">
-                    <dl>
-                    <dt><li>Address:</li></dt>
-                    <dd>5 Tahrir square, Cairo</dd>
-                    <br>
-                    <dt><li>Phone Numbers:</li></dt>
-                    <dd>01023232269</dd>
-                    <dd>01062830239</dd>
-                    </dl>
-                </div>
-            
-            </div> 
-
-            <div class="infoSocials">
-                <h1 id="headerText">Socials:</h1>
-                <br><br>
-                <a href="http://facebook.com" target="_blank">
-                    <img src="../../../Shared/Images/Facebook.png" alt="facebook" id="facebook">
-                </a>
+    <body class="text-white bg-primary">
+        <div>
+            <div>
+                <nav class="flex justify-between w-full bg-black">
+                    <div class="flex md:ml-10 md:m-0 m-3 space-x-3">
+                        <img src="../../../Shared/Images/menu.png" alt="" class="md:hidden h-8 w-auto cursor-pointer" id="menuButton">
+                        <img src="../../../Shared/Images/logo.png" alt="" class="md:h-16 md:w-full h-9 w-auto cursor-pointer md:block hidden">
+                    </div>
     
-                <a href="http://instagram.com" target="_blank">
-                    <img src="../../../Shared/Images/Instagram.png" alt="instagram" id="instagram"></a>
+                    
+                    <div class="">
+                        <img src="../../../Shared/Images/logo.png" alt="" class="md:h-16 md:w-full h-9 w-auto cursor-pointer m-3 md:hidden">
+                        <ul class="flex md:space-x-10 md:text-2xl md:mt-5 space-x-3 text-2xl font-serif mt-4">
+                            
+                            <li class="text-yellow-300  hidden md:block "><a href="">Home</a></li>
+                            <li class="hover:text-yellow-300 hidden md:block text-white"><a href="../../../Pages/Products/View/shop.html">Shop</a></li>
+                            <li class="hover:text-yellow-300 hidden md:block text-white"><a href="./Pages/General/View/aboutUs.html">About</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="flex md:mr-10 m-3 space-x-5">
+                        <a href=""><img src="../../../Shared/Images/shopping-cart-gold.png" alt="" class="md:h-11 md:w-full h-9 w-auto"></a>
+                    </div>
+                </nav>
             </div>
             
-            
+            <!--MOBILE SIDEBAR-->
+            <div class="md:hidden hidden fixed bg-black w-full font-serif transition duration-300 ease-in-out" id="phoSideBar">
+                <div class="space-y-5 text-2xl">
+                    <ul class="">
+                        <div class="hover:bg-gray-900">
+                            <li class="hover:text-yellow-300  mx-3"><a href="../../../index.html"><img src="../../../Shared/Images/pyramid.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Home</a></li>
+                        </div>
+                        <div class="hover:bg-gray-900">   
+                            <li class="text-yellow-300  mx-3"><a href=""><img src="../../../Shared/Images/shopIcon.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Shop</a></li>
+                        </div>
+                        <div class="hover:bg-gray-900">
+                            <li class="hover:text-yellow-300  mx-3"><a href="../../General/View/aboutUs.html"><img src="../../../Shared/Images/about.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> About</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <footer>
-            <img src="../../../Shared/Images/logo.png" id="footerLogo" alt="" style="height: 30px; width: auto;">
-            <p>&copy; Lux, 2021</p>
-            <div class="socials">
-                <a href="https://www.instagram.com/"><img src="../../../Shared/Images/Instagram.png" id="instagram" alt="" style="height: 30px; width: auto;"></a>
-                <a href="https://www.facebook.com/"><img src="../../../Shared/Images/Facebook.png" id="Facebook" alt="" style="height: 28px; width: auto;"></a>
-            </div> 
-        </footer>
+        
 
-        
-        
-        
-         
-    </div>
+    
+        <script src="../../../index.js"></script>
     </body>
 </html>
