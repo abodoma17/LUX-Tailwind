@@ -16,7 +16,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      
+      'cardColor' : '#141414',
       'primary': '#0e0e0e',
       black: colors.black,
       white: colors.white,
@@ -249,6 +249,7 @@ module.exports = {
       DEFAULT: '1',
     },
     fontFamily: {
+      nunito: ['Nunito', 'sans-serif'],
       sans: [
         'ui-sans-serif',
         'system-ui',
