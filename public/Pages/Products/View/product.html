@@ -8,61 +8,105 @@
     <link rel="stylesheet" href="../../../styles.css">
 </head>
 <body>
-    <div class="outerContainer">
-        <header>
-            <img src="../../../Shared/Images/logo.png" alt="" class="logo" style="width: 90px; padding-bottom: 5px;">
-            <nav>
-                <ul class="navLinks">
-                    <li><a href="../../../index.html" style="font-size: 25px;">Home</a></li>
-                    <li><a class="active" href="shop.html" style="font-size: 25px;">Shop</a></li>
-                    <li><a href="../../General/View/aboutUs.html" style="font-size: 25px;">About</a></li>
-                </ul>
-            </nav>
-            <a href="../../../Pages/Users/View/shoppingCart.html"><img src="../../../Shared/Images/shopping-cart-gold.png" alt="" style="width: 40px;"></a>
-        </header>
-        
-            
+    <body class="text-white bg-primary">
         <div>
-            <img src="../../../Shared/Images/accessories.jpg" alt="Product Image" id="prodImg">
+            <div>
+                <nav class="flex justify-between w-full bg-black">
+                    <div class="flex md:ml-10 md:m-0 m-3 space-x-3">
+                        <img src="../../../Shared/Images/menu.png" alt="" class="md:hidden h-8 w-auto cursor-pointer" id="menuButton">
+                        <img src="../../../Shared/Images/logo.png" alt="" class="md:h-16 md:w-full h-9 w-auto cursor-pointer md:block hidden">
+                    </div>
+    
+                    
+                    <div class="">
+                        <img src="../../../Shared/Images/logo.png" alt="" class="md:h-16 md:w-full h-9 w-auto cursor-pointer m-3 md:hidden">
+                        <ul class="flex md:space-x-10 md:text-2xl md:mt-5 space-x-3 text-2xl font-serif mt-4">
+                            
+                            <li class="hover:text-yellow-300  hidden md:block "><a href="../../../index.html">Home</a></li>
+                            <li class="hover:text-yellow-300 hidden md:block text-white"><a href="../../../Pages/Products/View/shop.html">Shop</a></li>
+                            <li class="text-yellow-300 hidden md:block"><a href="./Pages/General/View/aboutUs.html">About</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="flex md:mr-10 m-3 space-x-5">
+                        <a href=""><img src="../../../Shared/Images/shopping-cart-gold.png" alt="" class="md:h-11 md:w-full h-9 w-auto"></a>
+                    </div>
+                </nav>
+            </div>
+            
+            <!--MOBILE SIDEBAR-->
+            <div class="md:hidden hidden fixed bg-black w-full font-serif transition duration-300 ease-in-out" id="phoSideBar">
+                <div class="space-y-5 text-2xl">
+                    <ul class="">
+                        <div class="hover:bg-gray-900">
+                            <li class="hover:text-yellow-300  mx-3"><a href="../../../index.html"><img src="../../../Shared/Images/pyramid.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Home</a></li>
+                        </div>
+                        <div class="hover:bg-gray-900">   
+                            <li class="text-yellow-300  mx-3"><a href=""><img src="../../../Shared/Images/shopIcon.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Shop</a></li>
+                        </div>
+                        <div class="hover:bg-gray-900">
+                            <li class="hover:text-yellow-300  mx-3"><a href="../../General/View/aboutUs.html"><img src="../../../Shared/Images/about.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> About</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
         </div>
+
         
-        <div class="description">
-            <h1 id="productName">Sphinx Necklace Pendant</h1>
-            <h2 id="descriptionText">Unisex necklace pendant made of stainless steel. </h2>
+        <div class="md:grid md:grid-cols-3">
+           
 
-            <h3 id="price">EGP 50.00</h3>
-            <br>
-            <button type="button" id="buyButton">
-                Add to cart
-            </button>   
-            <br>
-            <br>     
-            <h5>
-                <p>
-                   The original sphinx had a long braided beard and a nose, and it was painted in bright colours. 
-                </p>
-            </h5>
-            <br>
-            <h2 id="dimensionHeader">Dimensions: </h3>
-                <br>
-            <h4 class="specifications">Weight: 350gm</h4>
-            <h4 class="specifications">Height: 5cm</h4>
-            <h4 class="specifications">Width: 2cm</h4>
+            <div class="mb-12 m-auto mt-10 w-11/12 h-22">
+                <img src="../../../Shared/Images/accessories.jpg">
+
+            </div>
+
+            <div class="col-span-2 float-left mt-10">
+
+                <h1 class="text-5xl mb-5">Sphinx Necklace Pendant</h1>
+
+                <h2 class="text-2xl" id="">Unisex necklace pendant made of stainless steel. </h2>
+
+                <h3 class="m-2" id="">EGP 50.00</h3>
+
+                <button type="button" >Add to cart</button>  
+                
+                <h5 class="text-l">The original sphinx had a long braided beard and a nose, and it was painted in bright colours. </h5>
+
+                <h3 class="text-2xl m-2" id="">Dimensions: </h3>
+                    
+                <h4 class="text-l m-2">Weight: 350gm</h4>
+                <h4 class="text-l m-2">Height: 5cm</h4>
+                <h4 class="text-l m-2">Width: 2cm</h4>
+
+
+                
+
+
+
+            </div>
+
+
         </div>
-
-
     </div>
     
 
-    <footer>
-        <img src="../../../Shared/Images/logo.png" id="footerLogo" alt="" style="height: 30px; width: auto;">
-        <p>&copy; Lux, 2021</p>
-        <div class="socials">
-            <a href="https://www.instagram.com/"><img src="../../../Shared/Images/Instagram.png" id="instagram" alt="" style="height: 30px; width: auto;"></a>
-            <a href="https://www.facebook.com/"><img src="../../../Shared/Images/Facebook.png" id="Facebook" alt="" style="height: 28px; width: auto;"></a>
-        </div> 
-      </footer>
-
+    <footer class="w-full bg-black mt-10 md:mt-32">
+        <div class="md:grid md:grid-cols-3 grid grid-cols-2">
+            <div class="md:p-20 p-5">
+                <ul class=" border-r-2 font-sans md:text-base text-xs">
+                    <a href=""><li class="my-2">About Us</li></a>
+                    <a href=""><li class="my-2">Return & Refund Policy</li></a>
+                    <a href=""><li class="my-2">Terms of Service</li></a>
+                    <a href=""><li class="my-2">Shipping</li></a>
+                </ul>
+            </div>
+            <div class="items-center h-full">
+                <img src="../../../Shared/Images/logo.png" alt="" class="md:h-1/2 md:w-auto mx-auto md:mt-20 mt-8 h-1/2 w-auto">
+            </div>
+        </div>
+    </footer>
+    <script src="../../../index.js"></script>
 
 </body>
 </html>
