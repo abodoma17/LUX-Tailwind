@@ -1,18 +1,25 @@
 var input = 1;
-const inputField = document.querySelector('#phoneNum');
-const button = document.querySelector('#checkoutButton');
+const inputField = document.getElementById('phoneNum');
+const button = document.getElementById('checkoutButton');
 
-inputField.addEventListener('keydown', () => {
-    var input = document.querySelector('#phoneNum').value+1;
-    if(input.length < 11 || input.length > 11)
+inputField.addEventListener('focusout', () => {
+    var input = document.getElementById('phoneNum').value.length;
+    console.log(input)
+    if(input < 11 || input > 11)
     {
         button.disabled = true;
         console.log(input.length);
-        document.querySelector('#checkoutButton').classList.add('cursor-not-allowed');
+        document.getElementById('checkoutButton').classList.add('cursor-not-allowed');
+        document.getElementById('phoneNum').classList.add('border-2');
+        document.getElementById('phoneNum').classList.add('border-red-600');
+        document.getElementById("phoneError").classList.remove('hidden');
     }
     else
     {
-        document.querySelector('#checkoutButton').classList.remove('cursor-not-allowed');
+        document.getElementById('checkoutButton').classList.remove('cursor-not-allowed');
+        document.getElementById('phoneNum').classList.remove('border-2');
+        document.querySelector('#phoneNum').classList.remove('border-red-600');
+        document.getElementById("phoneError").classList.add('hidden');
         button.disabled = false;
         console.log(input.length);
     }

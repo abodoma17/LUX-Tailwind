@@ -50,10 +50,52 @@
         </div>
     </div>
     
-    <div class="">
+    <div class="md:grid md:grid-cols-2">
+
+        <div class="md:flex h-screen justify-end items-center md:my-0 mx-16 hidden">
+            <div class="text-center bg-white text-black rounded-lg"> 
+                <div class="mx-10">
+                    <div class="">
+                        <h1 class="text-4xl font-bold p-3 border-b-2 border-black mb-4 inline-block">Shopping Cart</h1>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="border-t-2 border-gray-400 pt-4 flex items-center">
+                            <div>
+                                <img src="../../../Shared/Images/accessories.jpg" alt="" class="h-24 inline rounded-lg">
+                            </div>
+                            <div class="md:w-96 w-screen">
+                                <p class="text-2xl font-nunito">Sphinx Pendant</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text">50.00 EGP</p>
+                            </div>
+                        </div>
+                    
+                        <div class="border-t-2 border-gray-400 pt-4 flex items-center">
+                            <div>  
+                                <img src="../../../Shared/Images/papyrus3.jpg" alt="" class="h-24 inline rounded-lg">
+                            </div>
+                            <div class="md:w-96 w-screen">
+                                <p class="text-2xl font-nunito">Hieroglyphics Papyrus</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold text">50.00 EGP</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="flex justify-end mt-10">
+                        <div class="border-t-2 border-black font-bold">
+                            <p>Total: 100.00 EGP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         <div class="flex h-screen justify-center items-center md:my-0 mx-16">
-            <div class="text-center bg-white text-black rounded-lg"> 
+            <div class="text-center bg-white text-black rounded-lg max-w-md"> 
                 <div class="mx-10">
                     <img src="../../../Shared/Images/logo.png" alt="" class="w-1/3 mx-auto  mt-5">
                     <h1 class="text-4xl mt-5 mb-8 inline-block font-bold">Checkout</h1>
@@ -69,10 +111,16 @@
                             </select>
                         </div>
                     </div>
-                    
+                    <div>
+                        <label for="" id="phoneError" class="float-left text-red-600 hidden">Phone Number should be 11 digits.*</label>
                         
+                    </div>
+                    
+                    <input type="tel" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 mt-2" placeholder="Phone Number" id="phoneNum">
+                    <input type="email" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Email"> 
                     <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Address">
-                    <input type="tel" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Phone Number" id="phoneNum">
+                    
+                    
                     
                     <a href="../../../index.html"><button class="bg-yellow-600 text-white w-3/4 py-2 rounded-sm my-4" id="checkoutButton">Checkout</button></a>
                 </div>
