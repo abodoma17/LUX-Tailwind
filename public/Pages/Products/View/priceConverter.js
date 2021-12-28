@@ -1,4 +1,4 @@
-
+const originalPrice = document.getElementById('price').innerHTML;
 
 function convert()
 {
@@ -11,6 +11,6 @@ function convert()
     }
     else if(currency.value == "egp")
     {
-        price.innerHTML = (price.innerHTML*16).toPrecision(2);
+        price.innerHTML = originalPrice;
     }
 }
