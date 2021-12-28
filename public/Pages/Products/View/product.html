@@ -62,7 +62,15 @@
 
                 <h1 class="text-5xl mb-1 font-serif">Sphinx Necklace Pendant</h1>
                 <h2 class="text-2xl font-mono" id="">Unisex necklace pendant made of stainless steel. </h2>
-                <h3 class="font-serif text-xl text-yellow-100" id="">EGP 50.00</h3>
+                <div class="flex">
+                    <p class="text-xl text-yellow-100 font-nunito mr-2" id="price">50</p>
+
+                    <select class="text-black" id="currencySelect" onchange="convert();">
+                        <option value="egp">EGP</option>
+                        <option value="usd">US$</option>
+                    </select>
+                    
+                </div>
 
                 <button type="button" class="my-4 font-" style="background-color: #a48111;
                 color: rgb(255, 255, 255);
@@ -101,7 +109,7 @@
         </footer>
     
     
-    <script src="./oneProduct.js"></script>
+    <script src="./priceConverter.js"></script>
 
 </body>
 </html>
