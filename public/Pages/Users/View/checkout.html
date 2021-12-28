@@ -99,8 +99,14 @@
                 <div class="mx-10">
                     <img src="../../../Shared/Images/logo.png" alt="" class="w-1/3 mx-auto  mt-5">
                     <h1 class="text-4xl mt-5 mb-8 inline-block font-bold">Checkout</h1>
-                    <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="First Name">
-                    <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Last Name">
+                    <div>
+                        <label for="" class="float-left text-red-600 hidden" id="firstNameError">Name can not contain numbers.*</label> 
+                    </div>
+                    <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="First Name" id="firstNameInput">
+                    <div>
+                        <label for="" class="float-left text-red-600 hidden" id="lastNameError">Name can not contain numbers.*</label> 
+                    </div>
+                    <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Last Name" id="lastNameInput">
                     <div class="">
                         <div class="float-left flex items-center">
                             <p class="font-nunito font-semibold text-lg">City</p>
