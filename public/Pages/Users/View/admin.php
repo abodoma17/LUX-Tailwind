@@ -21,14 +21,14 @@
                     <img src="../../../Shared/Images/logo.png" alt="" class="md:h-16 md:w-full h-9 w-auto cursor-pointer m-3 md:hidden">
                     <ul class="flex md:space-x-10 md:text-2xl md:mt-5 space-x-3 text-2xl font-serif mt-4">
                         
-                        <li class="hover:text-yellow-300  hidden md:block"><a href="../../../index.html">Home</a></li>
-                        <li class="hover:text-yellow-300 hidden md:block"><a href="../../../Pages/Products/View/shop.html">Shop</a></li>
-                        <li class="hover:text-yellow-300 hidden md:block"><a href="../../../Pages/General/View/aboutUs.html">About</a></li>
+                        <li class="hover:text-yellow-300  hidden md:block"><a href="../../../index.php">Home</a></li>
+                        <li class="hover:text-yellow-300 hidden md:block"><a href="../../../Pages/Products/View/shop.php">Shop</a></li>
+                        <li class="hover:text-yellow-300 hidden md:block"><a href="../../../Pages/General/View/aboutUs.php">About</a></li>
                     </ul>
                 </div>
 
                 <div class="flex md:mr-10 m-3 space-x-5">
-                    <a href="./shoppingCart.html"><img src="../../../Shared/Images/shopping-cart-gold.png" alt="" class="md:h-11 md:w-full h-9 w-auto"></a>
+                    <a href="./shoppingCart.php"><img src="../../../Shared/Images/shopping-cart-gold.png" alt="" class="md:h-11 md:w-full h-9 w-auto"></a>
                 </div>
             </nav>
         </div>
@@ -37,13 +37,13 @@
             <div class="space-y-5 text-2xl">
                 <ul class="">
                     <div class="hover:bg-gray-900">
-                        <li class="hover:text-yellow-300  mx-3"><a href="../../../index.html"><img src="../../../Shared/Images/pyramid.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Home</a></li>
+                        <li class="hover:text-yellow-300  mx-3"><a href="../../../index.php"><img src="../../../Shared/Images/pyramid.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Home</a></li>
                     </div>
                     <div class="hover:bg-gray-900">   
-                        <li class="hover:text-yellow-300  mx-3"><a href="../../Products/View/shop.html"><img src="../../../Shared/Images/shopIcon.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Shop</a></li>
+                        <li class="hover:text-yellow-300  mx-3"><a href="../../Products/View/shop.php"><img src="../../../Shared/Images/shopIcon.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Shop</a></li>
                     </div>
                     <div class="hover:bg-gray-900">
-                        <li class="hover:text-yellow-300  mx-3"><a href="../../General/View/aboutUs.html"><img src="../../../Shared/Images/about.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> About</a></li>
+                        <li class="hover:text-yellow-300  mx-3"><a href="../../General/View/aboutUs.php"><img src="../../../Shared/Images/about.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> About</a></li>
                     </div>
                 </ul>
             </div>
@@ -66,7 +66,7 @@
                         <input type="checkbox" class="float-left ml-2 ">
                         <p class="float-left ml-2 text-sm font-semibold text-gray-600">Remember me</p>
                     </div>
-                    <a href="./adminFunc.html"><button class="bg-purple-700 text-white w-3/4 py-2 rounded-sm my-4">Login</button></a>
+                    <a href="./adminFunc.php"><button class="bg-purple-700 text-white w-3/4 py-2 rounded-sm my-4">Login</button></a>
                     <a href="" class="font-semibold text-purple-900 mb-12 block">Forgot password?</a>
                     
                 </div>

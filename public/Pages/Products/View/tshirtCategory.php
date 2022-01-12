@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Statue</title>
+    <title>T-Shirts</title>
     <link rel="stylesheet" href="../../../styles.css">
 </head>
 <body class="bg-primary text-white">
@@ -21,14 +21,14 @@
                 <img src="../../../Shared/Images/logo.png" alt="" class="md:h-16 md:w-full h-9 w-auto cursor-pointer m-3 md:hidden">
                 <ul class="flex md:space-x-10 md:text-2xl md:mt-5 space-x-3 text-2xl font-serif mt-4">
                     
-                    <li class="hover:text-yellow-300  hidden md:block"><a href="../../../index.html">Home</a></li>
-                    <li class="text-yellow-300 hidden md:block"><a href="./shop.html">Shop</a></li>
-                    <li class="hover:text-yellow-300 hidden md:block"><a href="../../General/View/aboutUs.html">About</a></li>
+                    <li class="hover:text-yellow-300  hidden md:block"><a href="../../../index.php">Home</a></li>
+                    <li class="text-yellow-300 hidden md:block"><a href="./shop.php">Shop</a></li>
+                    <li class="hover:text-yellow-300 hidden md:block"><a href="../../General/View/aboutUs.php">About</a></li>
                 </ul>
             </div>
 
             <div class="flex md:mr-10 m-3 space-x-5">
-                <a href="../../../Pages/Users/View/shoppingCart.html"><img src="../../../Shared/Images/shopping-cart-gold.png" alt="" class="md:h-11 md:w-full h-9 w-auto"></a>
+                <a href="../../../Pages/Users/View/shoppingCart.php"><img src="../../../Shared/Images/shopping-cart-gold.png" alt="" class="md:h-11 md:w-full h-9 w-auto"></a>
             </div>
         </nav>
     </div>
@@ -37,13 +37,13 @@
         <div class="space-y-5 text-2xl">
             <ul class="">
                 <div class="hover:bg-gray-900">
-                    <li class="hover:text-yellow-300  mx-3"><a href="../../../index.html"><img src="../../../Shared/Images/pyramid.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Home</a></li>
+                    <li class="hover:text-yellow-300  mx-3"><a href="../../../index.php"><img src="../../../Shared/Images/pyramid.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Home</a></li>
                 </div>
                 <div class="hover:bg-gray-900">   
-                    <li class="text-yellow-300  mx-3"><a href="./shop.html"><img src="../../../Shared/Images/shopIcon.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Shop</a></li>
+                    <li class="text-yellow-300  mx-3"><a href="./shop.php"><img src="../../../Shared/Images/shopIcon.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Shop</a></li>
                 </div>
                 <div class="hover:bg-gray-900">
-                    <li class="hover:text-yellow-300  mx-3"><a href="../../General/View/aboutUs.html"><img src="../../../Shared/Images/about.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> About</a></li>
+                    <li class="hover:text-yellow-300  mx-3"><a href="../../General/View/aboutUs.php"><img src="../../../Shared/Images/about.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> About</a></li>
                 </div>
             </ul>
         </div>
@@ -56,44 +56,44 @@
             </div>
             <!--CARDS GO HERE-->
             <div class=" text-center lg:col-span-2">
-                <h1 class="text-center md:text-6xl border-b-2 py-4 inline-block font-serif my-6 text-4xl">Statues</h1>
+                <h1 class="text-center md:text-6xl border-b-2 py-4 inline-block font-serif my-6 text-4xl">T-Shirts</h1>
                 <div class="md:grid md:grid-cols-3 md:gap-10 grid grid-cols-2 gap-5 text-center md:mx-16 mx-5">
-                    <a href="./product.html">
+                    <a href="./product.php">
                         <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
                             <img src="../../../Shared/Images/coming-soon.gif" alt="" class="md:bg-cover pb-3">
                             <span class="font-serif text-xl">Coming Soon</span>
                         </div>
                     </a>
 
-                    <a href="./product.html">
+                    <a href="./product.php">
                         <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
                             <img src="../../../Shared/Images/coming-soon.gif" alt="" class="md:bg-cover pb-3">
                             <span class="font-serif text-xl">Coming Soon</span>
                         </div>
                     </a>
 
-                    <a href="./product.html">
+                    <a href="./product.php">
                         <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
                             <img src="../../../Shared/Images/coming-soon.gif" alt="" class="md:bg-cover pb-3">
                             <span class="font-serif text-xl">Coming Soon</span>
                         </div>
                     </a>
 
-                    <a href="./product.html">
+                    <a href="./product.php">
                         <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
                             <img src="../../../Shared/Images/coming-soon.gif" alt="" class="md:bg-cover pb-3">
                             <span class="font-serif text-xl">Coming Soon</span>
                         </div>
                     </a>
 
-                    <a href="./product.html">
+                    <a href="./product.php">
                         <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
                             <img src="../../../Shared/Images/coming-soon.gif" alt="" class="md:bg-cover pb-3">
                             <span class="font-serif text-xl">Coming Soon</span>
                         </div>
                     </a>
 
-                    <a href="./product.html">
+                    <a href="./product.php">
                         <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
                             <img src="../../../Shared/Images/coming-soon.gif" alt="" class="md:bg-cover pb-3">
                             <span class="font-serif text-xl">Coming Soon</span>

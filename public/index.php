@@ -23,13 +23,13 @@
                     <ul class="flex md:space-x-10 md:text-2xl md:mt-5 space-x-3 text-2xl font-serif mt-4">
                         
                         <li class="text-yellow-300  hidden md:block"><a href="">Home</a></li>
-                        <li class="hover:text-yellow-300 hidden md:block"><a href="./Pages/Products/View/shop.html">Shop</a></li>
-                        <li class="hover:text-yellow-300 hidden md:block"><a href="./Pages/General/View/aboutUs.html">About</a></li>
+                        <li class="hover:text-yellow-300 hidden md:block"><a href="./Pages/Products/View/shop.php">Shop</a></li>
+                        <li class="hover:text-yellow-300 hidden md:block"><a href="./Pages/General/View/aboutUs.php">About</a></li>
                     </ul>
                 </div>
 
                 <div class="flex md:mr-10 m-3 space-x-5">
-                    <a href="./Pages/Users/View/shoppingCart.html"><img src="./Shared/Images/shopping-cart-gold.png" alt="" class="md:h-11 md:w-full h-9 w-auto"></a>
+                    <a href="./Pages/Users/View/shoppingCart.php"><img src="./Shared/Images/shopping-cart-gold.png" alt="" class="md:h-11 md:w-full h-9 w-auto"></a>
                 </div>
             </nav>
         </div>
@@ -41,10 +41,10 @@
                         <li class="text-yellow-300  mx-3"><a href=""><img src="./Shared/Images/pyramid.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Home</a></li>
                     </div>
                     <div class="hover:bg-gray-900">   
-                        <li class="hover:text-yellow-300  mx-3"><a href="./Pages/Products/View/shop.html"><img src="./Shared/Images/shopIcon.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Shop</a></li>
+                        <li class="hover:text-yellow-300  mx-3"><a href="./Pages/Products/View/shop.php"><img src="./Shared/Images/shopIcon.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Shop</a></li>
                     </div>
                     <div class="hover:bg-gray-900">
-                        <li class="hover:text-yellow-300  mx-3"><a href="./Pages/General/View/aboutUs.html"><img src="./Shared/Images/about.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> About</a></li>
+                        <li class="hover:text-yellow-300  mx-3"><a href="./Pages/General/View/aboutUs.php"><img src="./Shared/Images/about.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> About</a></li>
                     </div>
                 </ul>
             </div>
@@ -55,7 +55,7 @@
         <div class="text-center">
             <h1 style="-webkit-text-stroke: 1.25px black;" class="md:text-8xl text-5xl font-serif">Welcome to LUX</h1>
             <h2 style="-webkit-text-stroke: 1px black;" class="md:text-6xl text-3xl font-serif font-bold">Every gift tells a story</h2>
-            <a class="" href="./Pages/Products/View/shop.html"><button class="md:px-10 md:py-4 px-6 py-3 bg-black rounded-3xl border-2 border-gray-900 bg-opacity-95 stroke hover:bg-opacity-80 transition ease-out uppercase font-bold text-">Explore</button></a>
+            <a class="" href="./Pages/Products/View/shop.php"><button class="md:px-10 md:py-4 px-6 py-3 bg-black rounded-3xl border-2 border-gray-900 bg-opacity-95 stroke hover:bg-opacity-80 transition ease-out uppercase font-bold text-">Explore</button></a>
 
         </div>
     </main>

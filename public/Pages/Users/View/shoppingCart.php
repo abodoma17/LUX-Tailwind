@@ -20,14 +20,14 @@
                     <img src="../../../Shared/Images/logo.png" alt="" class="md:h-16 md:w-full h-9 w-auto cursor-pointer m-3 md:hidden">
                     <ul class="flex md:space-x-10 md:text-2xl md:mt-5 space-x-3 text-2xl font-serif mt-4">
                         
-                        <li class="hover:text-yellow-300  hidden md:block"><a href="../../../index.html">Home</a></li>
-                        <li class="hover:text-yellow-300 hidden md:block"><a href="./shop.html">Shop</a></li>
-                        <li class="hover:text-yellow-300 hidden md:block"><a href="../../General/View/aboutUs.html">About</a></li>
+                        <li class="hover:text-yellow-300  hidden md:block"><a href="../../../index.php">Home</a></li>
+                        <li class="hover:text-yellow-300 hidden md:block"><a href="../../Products/View/shop.php">Shop</a></li>
+                        <li class="hover:text-yellow-300 hidden md:block"><a href="../../General/View/aboutUs.php">About</a></li>
                     </ul>
                 </div>
     
                 <div class="flex md:mr-10 m-3 space-x-5">
-                    <a href="./shoppingCart.html"><img src="../../../Shared/Images/shopping-cart-gold.png" alt="" class="md:h-11 md:w-full h-9 w-auto"></a>
+                    <a href="./shoppingCart.php"><img src="../../../Shared/Images/shopping-cart-gold.png" alt="" class="md:h-11 md:w-full h-9 w-auto"></a>
                 </div>
             </nav>
         </div>
@@ -36,13 +36,13 @@
             <div class="space-y-5 text-2xl">
                 <ul class="">
                     <div class="hover:bg-gray-900">
-                        <li class="hover:text-yellow-300  mx-3"><a href="../../../index.html"><img src="../../../Shared/Images/pyramid.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Home</a></li>
+                        <li class="hover:text-yellow-300  mx-3"><a href="../../../index.php"><img src="../../../Shared/Images/pyramid.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Home</a></li>
                     </div>
                     <div class="hover:bg-gray-900">   
-                        <li class="hover:text-yellow-300  mx-3"><a href="../../Products/View/shop.html"><img src="../../../Shared/Images/shopIcon.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Shop</a></li>
+                        <li class="hover:text-yellow-300  mx-3"><a href="../../Products/View/shop.php"><img src="../../../Shared/Images/shopIcon.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> Shop</a></li>
                     </div>
                     <div class="hover:bg-gray-900">
-                        <li class="hover:text-yellow-300  mx-3"><a href="../../General/View/aboutUs.html"><img src="../../../Shared/Images/about.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> About</a></li>
+                        <li class="hover:text-yellow-300  mx-3"><a href="../../General/View/aboutUs.php"><img src="../../../Shared/Images/about.png" alt="" class="h-6 w-auto inline-block mb-2 mr-1"> About</a></li>
                     </div>
                 </ul>
             </div>
@@ -51,7 +51,7 @@
         <div class="w-full">
             <img src="../../../Shared/Images/coming-soon.gif" class=" mx-auto my-5">
             <div class="flex justify-center w-full mb-80 md:mb-0">
-                <a href="./checkout.html" class="">
+                <a href="./checkout.php" class="">
                     <button type="button" class="" style="background-color: #a48111;
                     color: rgb(255, 255, 255);
                     text-transform: uppercase;
