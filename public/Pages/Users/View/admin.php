@@ -58,11 +58,11 @@
         <div class="flex h-screen justify-center items-center md:my-0 mx-16">
             <div class="text-center bg-white text-black rounded-lg"> 
 
-                <form class="mx-10" method="post" action="loginHandler">
+                <form class="mx-10" method="post" action="loginHandler.php">
                     <img src="../../../Shared/Images/logo.png" alt="" class="w-1/3 mx-auto  mt-5">
                     <h1 class="text-4xl mt-5 mb-8 inline-block font-bold">LOGIN</h1>
 
-                    <input type="text" name ="userName"class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Username">
+                    <input type="text" name ="username"class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Username">
                     <input type="password" name="password" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-1 mb-1" placeholder="Password">
                     <div class="flex items=center mb-5 mt-3">
                         <input type="checkbox" class="float-left ml-2 ">

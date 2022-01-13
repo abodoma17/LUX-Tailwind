@@ -1,31 +1,25 @@
 <?php
 
-    $userName= $_POST["userName"];
-    $password = $_POST["password"]
+    $username= $_POST["username"];
+    $password = $_POST["password"];
 
     $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
-    $db = mysqli_select_db($con,"luxdb") or die ("Error: Couldn't connect to Database");;
+    $db = mysqli_select_db($con,"luxdb") or die ("Error: Couldn't connect to Database");
 
-    $login = "SELECT userName,password FROM admin WHERE userName='$userName' and password='$password' ";
+    $login = "SELECT username,password FROM users WHERE username='$username' and password='$password' ";
 
     $result = mysqli_query($con,$login);
-    $count = mysqli_num_rows(result);
+    $count = mysqli_num_rows($result);
 
     if($count==1){
 
         session_start();
-        $_SESSION["loggedAdmin"]=$userName;
+        $_SESSION["loggedAdmin"]=$username;
         header('Location: adminFunc.php');
 
 
     }else {
 
-        echo "INVALID EMAIL OR PASSWORD";
+        header('Location: admin.php');
     }
-
-
-
-
-
-
 ?>
