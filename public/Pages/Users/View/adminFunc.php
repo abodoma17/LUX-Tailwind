@@ -73,28 +73,28 @@
                         </div>
                     </a>
 
-                    <a href="./editProduct.php">
+                    <a href="./adminAccessories.php">
                         <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
                             <img src="../../../Shared/Images/adminEdit.svg" alt="" class="md:bg-cover pb-3 h-60">
                             <span class="font-serif text-xl">Accessories</span>
                         </div>
                     </a>
 
-                    <a href="./editProduct.php">
+                    <a href="./adminPapyrus.php">
                         <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
                             <img src="../../../Shared/Images/undraw1.svg" alt="" class="md:bg-cover pb-3 h-60">
                             <span class="font-serif text-xl">Papyrus</span>
                         </div>
                     </a>
 
-                    <a href="./editProduct.php">
+                    <a href="./adminT-Shirts.php">
                         <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
                             <img src="../../../Shared/Images/undraw2.svg" alt="" class="md:bg-cover pb-3 h-60">
                             <span class="font-serif text-xl">T-Shirts</span>
                         </div>
                     </a>
 
-                    <a href="./editProduct.php">
+                    <a href="./adminFragrances.php">
                         <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
                             <img src="../../../Shared/Images/undraw3.svg" alt="" class="md:bg-cover pb-3 h-60">
                             <span class="font-serif text-xl">Fragrances</span>

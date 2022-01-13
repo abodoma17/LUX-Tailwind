@@ -4,11 +4,11 @@
     $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
     $db = mysqli_select_db($con,"luxdb")or die ("Error: Couldn't connect to database");
 
-    $query = "DELETE FROM statues WHERE sID ='$textBoxValue'";
+    $query = "DELETE FROM tshirts WHERE tID ='$textBoxValue'";
 
     $result = mysqli_query($con,$query);
 
     if($result){
-        header('Location: ../View/adminStatues.php');
+        header('Location: ../View/adminT-Shirts.php');
     }  
 ?>
