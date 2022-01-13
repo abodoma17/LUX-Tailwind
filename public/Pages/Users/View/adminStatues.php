@@ -70,25 +70,33 @@
                 </thead>
                 <tbody class="text-lg bg-gray-700 text-center">
                     <?php
-                        //Connect to db
-                        //pull data
-                        //foreach loop
-                            //tr
-                            //td for each element with the template bellow
-                            //aflet el tr
+                        $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
+                        $db = mysqli_select_db($con,"luxdb") or die ("Error: Couldn't connect to Database");;
+
+                        $viewStatues = "SELECT * FROM statues";
+                        $result = mysqli_query($con,$viewStatues);
+
+                        if(!$result){
+                            die("ERROR: " . mysqli_errno($con));
+                        }
+
+                        while($row = mysqli_fetch_array($result)){
+                            echo "
+                            <tr>
+                                <td>" . $row["sID"] . "</td>
+                                <td>" . $row["name"] . "</td>
+                                <td>" . $row["description"] . "</td>
+                                <td>" . $row["price"] . "</td>
+                                <td>" . $row["bg"] . "</td>
+                                <td>" . $row["weight"] . "</td>
+                                <td>" . $row["width"] . "</td>
+                                <td>" . $row["height"] . "</td>
+                                <td>" . $row["image1"] . "</td>
+                                <td>" . $row["image2"] . "</td>
+                            </tr>
+                            ";
+                        }
                     ?>
-                    <tr>
-                        <td class="px-3">3</td>
-                        <td class="px-3">Lorem, ipsum dolor.</td>
-                        <td class="px-3">Lorem ipsum dolor sit amet consectetur adipisicing.</td>
-                        <td class="px-3">500</td>
-                        <td class="px-3">Lorem ipsum dolor sit amet consectetur adipisicing.</td>
-                        <td class="px-3">33</td>
-                        <td class="px-3">12</td>
-                        <td class="px-3">32</td>
-                        <td class="px-3 underline"><a href="">IMAGE1</a></td>
-                        <td class="px-3 underline"><a href="">IMAGE2</a></td>
-                    </tr>
                 </tbody>
             </table>
         </div>  
@@ -97,19 +105,19 @@
 
             <div>
                 <div class="flex w-full justify-center items-center md:my-0 mx-16">
-                <form method="POST" action="" class="text-center bg-white text-black rounded-lg max-w-md"> 
+                <form method="POST" action="../Controller/addStatueHandler.php" class="text-center bg-white text-black rounded-lg max-w-md"> 
                     <div class="mx-10">
                         <img src="../../../Shared/Images/logo.png" alt="" class="w-1/3 mx-auto  mt-5">
                         <h1 class="text-4xl mt-5 mb-8 inline-block font-bold">Add Product</h1>
-                        <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Name" id="nameInput">                 
-                        <input type="tel" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 mt-2" placeholder="Description" id="descriptionInput">
-                        <input type="email" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Price" id="priceInput"> 
-                        <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Background Info" id="bgInput">
-                        <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Weight" id="weightInput">
-                        <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Width" id="widthInput">
-                        <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Height" id="heightInput">
-                        <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Image 1" id="image1input">
-                        <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Image 2" id="image2">
+                        <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Name" name="nameInput">                 
+                        <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 mt-2" placeholder="Description" name="descriptionInput">
+                        <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Price" name="priceInput"> 
+                        <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Background Info" name="bgInput">
+                        <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Weight" name="weightInput">
+                        <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Width" name="widthInput">
+                        <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Height" name="heightInput">
+                        <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Image 1" name="image1input">
+                        <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Image 2"name="image2">
                         
                         <button type="submit" class="bg-yellow-600 text-white w-3/4 py-2 rounded-sm my-4" id="addButton">Add</button>
                     </div>
@@ -122,9 +130,10 @@
             <div class="md:border-l-2 md:border-white flex-col justify-center align-center text-center">
                 <h1 class="text-center lg:text-4xl border-b-2 inline-block font-serif text-4xl">Delete Product</h1>
                 <div class="flex w-full justify-center align-center">
-                    <form action="POST" class="block mt-5">
+                    <form method ="POST"
+                    action="../Controller/deleteStatueHandler.php" class="block mt-5">
                         <div>
-                            <input type="text" placeholder="ID" class="bg-gray-300 rounded-md p-2 w-32 text-gray-900 my-2 placeholder-gray-700" id="idDelete">
+                            <input type="text" placeholder="ID" class="bg-gray-300 rounded-md p-2 w-32 text-gray-900 my-2 placeholder-gray-700" name="idDelete">
                             <button type="submit" class="p-2 bg-yellow-600 rounded-md text-white">Delete</button>
                         </div> 
                     </form>
