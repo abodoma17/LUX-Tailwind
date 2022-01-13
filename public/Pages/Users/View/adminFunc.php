@@ -58,24 +58,46 @@
             <div class=" text-center lg:col-span-2">
                 <h1 class="text-center md:text-6xl border-b-2 py-4 inline-block font-serif my-6 text-4xl">Functionalities</h1>
                 <div class="md:grid md:grid-cols-3 md:gap-10 grid grid-cols-2 gap-5 text-center md:mx-16 mx-5">
+
                     <a href="./addProduct.php">
                         <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
                             <img src="../../../Shared/Images/adminAdd.svg" alt="" class="md:bg-cover pb-3 h-60">
-                            <span class="font-serif text-xl">Add Product</span>
+                            <span class="font-serif text-xl">View Orders</span>
                         </div>
                     </a>
 
-                    <a href="./deleteProduct.php">
+                    <a href="./adminStatues.php">
                         <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
                             <img src="../../../Shared/Images/adminDelete.svg" alt="" class="md:bg-cover pb-3 h-60">
-                            <span class="font-serif text-xl">Delete Product</span>
+                            <span class="font-serif text-xl">Statues</span>
                         </div>
                     </a>
 
                     <a href="./editProduct.php">
                         <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
                             <img src="../../../Shared/Images/adminEdit.svg" alt="" class="md:bg-cover pb-3 h-60">
-                            <span class="font-serif text-xl">Edit Product</span>
+                            <span class="font-serif text-xl">Accessories</span>
+                        </div>
+                    </a>
+
+                    <a href="./editProduct.php">
+                        <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
+                            <img src="../../../Shared/Images/undraw1.svg" alt="" class="md:bg-cover pb-3 h-60">
+                            <span class="font-serif text-xl">Papyrus</span>
+                        </div>
+                    </a>
+
+                    <a href="./editProduct.php">
+                        <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
+                            <img src="../../../Shared/Images/undraw2.svg" alt="" class="md:bg-cover pb-3 h-60">
+                            <span class="font-serif text-xl">T-Shirts</span>
+                        </div>
+                    </a>
+
+                    <a href="./editProduct.php">
+                        <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
+                            <img src="../../../Shared/Images/undraw3.svg" alt="" class="md:bg-cover pb-3 h-60">
+                            <span class="font-serif text-xl">Fragrances</span>
                         </div>
                     </a>
 
