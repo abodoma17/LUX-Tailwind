@@ -59,8 +59,11 @@
     </div>
 </div>
 
+    <div class="flex w-screen justify-center mt-2">
+        <h1 class="text-center md:text-6xl border-b-2 py-4 inline-block font-serif my-6 text-4xl">Fragrances</h1>
+    </div>
 
-    <div class="flex w-screen justify-center mt-12">
+    <div class="flex w-screen justify-center mt-4">
         <div class="">
             <table class="border-separate border border-gray-500 table-auto">
                 <thead>
