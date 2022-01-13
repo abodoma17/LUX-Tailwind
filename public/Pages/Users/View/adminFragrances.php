@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Product</title>
+    <title>Fragrances</title>
     <link rel="stylesheet" href="../../../styles.css">
 </head>
 <body class="bg-primary text-white">
@@ -56,7 +56,7 @@
             <table class="border-separate border border-gray-500 table-auto">
                 <thead>
                     <tr class="uppercase text-xl bg-gray-800">
-                        <th class="border border-gray-600 p-4">sID</th>
+                        <th class="border border-gray-600 p-4">fID</th>
                         <th class="border border-gray-600  p-4">name</th>
                         <th class="border border-gray-600  p-4">description</th>
                         <th class="border border-gray-600  p-4">price</th>
