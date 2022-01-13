@@ -57,19 +57,22 @@
         
         <div class="flex h-screen justify-center items-center md:my-0 mx-16">
             <div class="text-center bg-white text-black rounded-lg"> 
-                <div class="mx-10">
+
+                <form class="mx-10" method="post" action="loginHandler">
                     <img src="../../../Shared/Images/logo.png" alt="" class="w-1/3 mx-auto  mt-5">
                     <h1 class="text-4xl mt-5 mb-8 inline-block font-bold">LOGIN</h1>
-                    <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Username">
-                    <input type="password" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-1 mb-1" placeholder="Password">
+
+                    <input type="text" name ="userName"class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Username">
+                    <input type="password" name="password" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-1 mb-1" placeholder="Password">
                     <div class="flex items=center mb-5 mt-3">
                         <input type="checkbox" class="float-left ml-2 ">
                         <p class="float-left ml-2 text-sm font-semibold text-gray-600">Remember me</p>
                     </div>
-                    <a href="./adminFunc.php"><button class="bg-purple-700 text-white w-3/4 py-2 rounded-sm my-4">Login</button></a>
+                    <a href="./adminFunc.php"><input type="submit" value="Login" class="bg-purple-700 text-white w-3/4 py-2 rounded-sm my-4 "></input></a>
+
                     <a href="" class="font-semibold text-purple-900 mb-12 block">Forgot password?</a>
                     
-                </div>
+                </form>
             </div>
           </div>
     </div>
