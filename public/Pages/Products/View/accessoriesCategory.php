@@ -58,48 +58,26 @@
             <div class=" text-center lg:col-span-2">
                 <h1 class="text-center md:text-6xl border-b-2 py-4 inline-block font-serif my-6 text-4xl">Accessories</h1>
                 <div class="md:grid md:grid-cols-3 md:gap-10 grid grid-cols-2 gap-5 text-center md:mx-16 mx-5">
-                    <a href="./product.php">
-                        <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
-                            <img src="../../../Shared/Images/coming-soon.gif" alt="" class="md:bg-cover pb-3">
-                            <span class="font-serif text-xl">Coming Soon</span>
-                        </div>
-                    </a>
+                <?php
+                    $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
+                    $db = mysqli_select_db($con,"luxdb");
 
-                    <a href="./product.php">
-                        <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
-                            <img src="../../../Shared/Images/coming-soon.gif" alt="" class="md:bg-cover pb-3">
-                            <span class="font-serif text-xl">Coming Soon</span>
-                        </div>
-                    </a>
+                    $viewStatues = "SELECT * FROM accessories ORDER BY aID DESC";
+                    $result = mysqli_query($con, $viewStatues);
 
-                    <a href="./product.php">
-                        <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
-                            <img src="../../../Shared/Images/coming-soon.gif" alt="" class="md:bg-cover pb-3">
-                            <span class="font-serif text-xl">Coming Soon</span>
-                        </div>
-                    </a>
-
-                    <a href="./product.php">
-                        <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
-                            <img src="../../../Shared/Images/coming-soon.gif" alt="" class="md:bg-cover pb-3">
-                            <span class="font-serif text-xl">Coming Soon</span>
-                        </div>
-                    </a>
-
-                    <a href="./product.php">
-                        <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
-                            <img src="../../../Shared/Images/coming-soon.gif" alt="" class="md:bg-cover pb-3">
-                            <span class="font-serif text-xl">Coming Soon</span>
-                        </div>
-                    </a>
-
-                    <a href="./product.php">
-                        <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
-                            <img src="../../../Shared/Images/coming-soon.gif" alt="" class="md:bg-cover pb-3">
-                            <span class="font-serif text-xl">Coming Soon</span>
-                        </div>
-                    </a>
-
+                    while($row = mysqli_fetch_array($result))
+                    {
+                        echo "
+                        <a href='product.php?aID=".$row["aID"]."'>
+                            <div class='cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover' style='box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);'>
+                            <img src='".$row["image1"]."' alt='' class='md:bg-cover pb-3'>
+                            <span class='font-serif text-xl'>".$row["name"]."</span>
+                            <span class='font-mono text-lg block'>".$row["price"]." EGP</span>
+                            </div>
+                        </a>
+                        ";
+                    }
+                    ?>
                 </div>
             </div>
             

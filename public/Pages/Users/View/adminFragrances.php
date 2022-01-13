@@ -103,8 +103,8 @@
                                 <td>" . $row["weight"] . "</td>
                                 <td>" . $row["width"] . "</td>
                                 <td>" . $row["height"] . "</td>
-                                <td>" . $row["image1"] . "</td>
-                                <td>" . $row["image2"] . "</td>
+                                <td><a href='" . $row["image1"] . "'>image1</a></td>
+                                <td><a href='" . $row["image2"] . "'>image1</a></td>
                             </tr>
                             ";
                         }
