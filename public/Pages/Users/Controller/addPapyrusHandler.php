@@ -12,7 +12,7 @@
     $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
     $db = mysqli_select_db($con,"luxdb") or die ("Error: Couldn't connect to Database");;
 
-    $query = "INSERT INTO papyrus(name,description,price,bg,weight,width,height,image1,image2) value ('$nameInput','$descriptionInput','$priceInput','$bgInput','$weightInput','$widthInput','$heightInput','$image1input','$image2')";
+    $query = "INSERT INTO products(name,description,price,bg,weight,width,height,image1,image2,cID) value ('$nameInput','$descriptionInput','$priceInput','$bgInput','$weightInput','$widthInput','$heightInput','$image1input','$image2',4)";
 
     $result = mysqli_query($con,$query);
 

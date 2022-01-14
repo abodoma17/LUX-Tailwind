@@ -58,102 +58,20 @@
             <div class=" text-center lg:col-span-2">
                 <h1 class="text-center md:text-6xl border-b-2 py-4 inline-block font-serif my-6 text-4xl">All Items</h1>
                 <div class="md:grid md:grid-cols-3 md:gap-10 grid grid-cols-2 gap-5 text-center md:mx-16 mx-5">
+
                 <?php
                     $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
                     $db = mysqli_select_db($con,"luxdb");
 
-                    $viewStatues = "SELECT * FROM statues ORDER BY sID DESC";
-                    $result = mysqli_query($con, $viewStatues);
-
-                    while($row = mysqli_fetch_array($result))
-                    {
-                        echo "
-                        <a href='product.php?sID=".$row["sID"]."'>
-                            <div class='cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover' style='box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);'>
-                            <img src='".$row["image1"]."' alt='' class='md:bg-cover pb-3'>
-                            <span class='font-serif text-xl'>".$row["name"]."</span>
-                            <span class='font-mono text-lg block'>".$row["price"]." EGP</span>
-                            </div>
-                        </a>
-                        ";
-                    }
-
-                    ?>
-
-                    <?php
-                    $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
-                    $db = mysqli_select_db($con,"luxdb");
-
-                    $viewStatues = "SELECT * FROM accessories ORDER BY aID DESC";
-                    $result = mysqli_query($con, $viewStatues);
-
-                    while($row = mysqli_fetch_array($result))
-                    {
-                        echo "
-                        <a href='product.php?aID=".$row["aID"]."'>
-                            <div class='cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover' style='box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);'>
-                            <img src='".$row["image1"]."' alt='' class='md:bg-cover pb-3'>
-                            <span class='font-serif text-xl'>".$row["name"]."</span>
-                            <span class='font-mono text-lg block'>".$row["price"]." EGP</span>
-                            </div>
-                        </a>
-                        ";
-                    }
-                    ?>
-                    
-                    <?php
-                    $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
-                    $db = mysqli_select_db($con,"luxdb");
-
-                    $viewTshirts = "SELECT * FROM tshirts ORDER BY tID DESC";
-                    $result = mysqli_query($con, $viewTshirts);
-
-                    while($row = mysqli_fetch_array($result))
-                    {
-                        echo "
-                        <a href='product.php?tID=".$row["tID"]."'>
-                            <div class='cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover' style='box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);'>
-                            <img src='".$row["image1"]."' alt='' class='md:bg-cover pb-3'>
-                            <span class='font-serif text-xl'>".$row["name"]."</span>
-                            <span class='font-mono text-lg block'>".$row["price"]." EGP</span>
-                            </div>
-                        </a>
-                        ";
-                    }
-                    ?>
-
-                    <?php
-                    $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
-                    $db = mysqli_select_db($con,"luxdb");
-
-                    $viewPapyrus = "SELECT * FROM papyrus ORDER BY pID DESC";
-                    $result = mysqli_query($con, $viewPapyrus);
-
-                    while($row = mysqli_fetch_array($result))
-                    {
-                        echo "
-                        <a href='product.php?pID=".$row["pID"]."'>
-                            <div class='cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover' style='box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);'>
-                            <img src='".$row["image1"]."' alt='' class='md:bg-cover pb-3'>
-                            <span class='font-serif text-xl'>".$row["name"]."</span>
-                            <span class='font-mono text-lg block'>".$row["price"]." EGP</span>
-                            </div>
-                        </a>
-                        ";
-                    }
-                    ?>
-
-                    <?php
-                    $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
-                    $db = mysqli_select_db($con,"luxdb");
-
-                    $viewFragrances = "SELECT * FROM fragrances ORDER BY fID DESC";
+                    $viewFragrances = "SELECT * FROM products 
+                    WHERE cID=3
+                    ORDER BY id DESC";
                     $result = mysqli_query($con, $viewFragrances);
 
                     while($row = mysqli_fetch_array($result))
                     {
                         echo "
-                        <a href='product.php?fID=".$row["fID"]."'>
+                        <a href='product.php?id=".$row["id"]."'>
                             <div class='cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover' style='box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);'>
                             <img src='".$row["image1"]."' alt='' class='md:bg-cover pb-3'>
                             <span class='font-serif text-xl'>".$row["name"]."</span>
@@ -162,9 +80,103 @@
                         </a>
                         ";
                     }
-                    ?> 
+                    ?>  
 
-                    
+                <?php
+                    $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
+                    $db = mysqli_select_db($con,"luxdb");
+
+                    $viewStatues = "SELECT * FROM products
+                    WHERE cID=1 
+                    ORDER BY id DESC";
+                    $result = mysqli_query($con, $viewStatues);
+
+                    while($row = mysqli_fetch_array($result))
+                    {
+                        echo "
+                        <a href='product.php?id=".$row["id"]."'>
+                            <div class='cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover' style='box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);'>
+                            <img src='".$row["image1"]."' alt='' class='md:bg-cover pb-3'>
+                            <span class='font-serif text-xl'>".$row["name"]."</span>
+                            <span class='font-mono text-lg block'>".$row["price"]." EGP</span>
+                            </div>
+                        </a>
+                        ";
+                    }
+
+                    ?>
+
+                    <?php   
+                    $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
+                    $db = mysqli_select_db($con,"luxdb");
+
+                    $viewStatues = "SELECT * FROM products
+                     WHERE cID = 2
+                     ORDER BY id DESC";
+                    $result = mysqli_query($con, $viewStatues);
+
+                    while($row = mysqli_fetch_array($result))
+                    {
+                        echo "
+                        <a href='product.php?id=".$row["id"]."'>
+                            <div class='cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover' style='box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);'>
+                            <img src='".$row["image1"]."' alt='' class='md:bg-cover pb-3'>
+                            <span class='font-serif text-xl'>".$row["name"]."</span>
+                            <span class='font-mono text-lg block'>".$row["price"]." EGP</span>
+                            </div>
+                        </a>
+                        ";
+                    }
+                    ?>
+
+                    <?php
+                    $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
+                    $db = mysqli_select_db($con,"luxdb");
+
+                    $viewPapyrus = "SELECT * FROM products
+                    WHERE cID=4
+                     ORDER BY id DESC";
+                    $result = mysqli_query($con, $viewPapyrus);
+
+                    while($row = mysqli_fetch_array($result))
+                    {
+                        echo "
+                        <a href='product.php?id=".$row["id"]."'>
+                            <div class='cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover' style='box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);'>
+                            <img src='".$row["image1"]."' alt='' class='md:bg-cover pb-3'>
+                            <span class='font-serif text-xl'>".$row["name"]."</span>
+                            <span class='font-mono text-lg block'>".$row["price"]." EGP</span>
+                            </div>
+                        </a>
+                        ";
+                    }
+                    ?>
+
+                    <?php
+                    $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
+                    $db = mysqli_select_db($con,"luxdb");
+
+                    $viewTshirts = "SELECT * FROM products 
+                    WHERE cID=5
+                    ORDER BY id DESC";
+                    $result = mysqli_query($con, $viewTshirts);
+
+                    while($row = mysqli_fetch_array($result))
+                    {
+                        echo "
+                        <a href='product.php?id=".$row["id"]."'>
+                            <div class='cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover' style='box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);'>
+                            <img src='".$row["image1"]."' alt='' class='md:bg-cover pb-3'>
+                            <span class='font-serif text-xl'>".$row["name"]."</span>
+                            <span class='font-mono text-lg block'>".$row["price"]." EGP</span>
+                            </div>
+                        </a>
+                        ";
+                    }
+                    ?>
+
+
+
                 </div>
             </div>
             

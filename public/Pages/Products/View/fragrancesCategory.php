@@ -62,13 +62,15 @@
                     $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
                     $db = mysqli_select_db($con,"luxdb");
 
-                    $viewFragrances = "SELECT * FROM fragrances ORDER BY fID DESC";
+                    $viewFragrances = "SELECT * FROM products 
+                    WHERE cID=3
+                    ORDER BY id DESC";
                     $result = mysqli_query($con, $viewFragrances);
 
                     while($row = mysqli_fetch_array($result))
                     {
                         echo "
-                        <a href='product.php?fID=".$row["fID"]."'>
+                        <a href='product.php?id=".$row["id"]."'>
                             <div class='cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover' style='box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);'>
                             <img src='".$row["image1"]."' alt='' class='md:bg-cover pb-3'>
                             <span class='font-serif text-xl'>".$row["name"]."</span>

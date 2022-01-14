@@ -74,7 +74,7 @@
                     <a href="./statuesCategory.php">
                         <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
                             <img src="../../../Shared/Images/statue2.png" alt="" class="md:bg-cover pb-3">
-                            <span class="font-serif text-2xl">Statue</span>
+                            <span class="font-serif text-2xl">Statues</span>
                         </div>
                     </a>
 
@@ -88,7 +88,7 @@
                     <a href="./fragrancesCategory.php">
                         <div class="cursor-pointer bg-primary rounded-lg p-2 transform transition duration-300 ease-in-out hover:scale-110 hover:drop-shadow-cardhover" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.75);">
                             <img src="../../../Shared/Images/perfume1.jpg" alt="" class="md:bg-cover pb-3">
-                            <span class="font-serif text-2xl">Fragrences</span>
+                            <span class="font-serif text-2xl">Fragrances</span>
                         </div>
                     </a>
 

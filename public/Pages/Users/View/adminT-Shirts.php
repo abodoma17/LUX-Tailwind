@@ -67,7 +67,7 @@
             <table class="border-separate border border-gray-500 table-auto">
                 <thead>
                     <tr class="uppercase text-xl bg-gray-800">
-                        <th class="border border-gray-600 p-4">tID</th>
+                        <th class="border border-gray-600 p-4">ID</th>
                         <th class="border border-gray-600  p-4">name</th>
                         <th class="border border-gray-600  p-4">description</th>
                         <th class="border border-gray-600  p-4">price</th>
@@ -84,7 +84,8 @@
                         $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
                         $db = mysqli_select_db($con,"luxdb") or die ("Error: Couldn't connect to Database");;
 
-                        $viewTshirts = "SELECT * FROM tshirts";
+                        $viewTshirts = "SELECT * FROM products
+                        WHERE cID=5";
                         $result = mysqli_query($con,$viewTshirts);
 
                         if(!$result){
@@ -94,7 +95,7 @@
                         while($row = mysqli_fetch_array($result)){
                             echo "
                             <tr>
-                                <td>" . $row["tID"] . "</td>
+                                <td>" . $row["id"] . "</td>
                                 <td>" . $row["name"] . "</td>
                                 <td>" . $row["description"] . "</td>
                                 <td>" . $row["price"] . "</td>
@@ -103,7 +104,7 @@
                                 <td>" . $row["width"] . "</td>
                                 <td>" . $row["height"] . "</td>
                                 <td><a href='" . $row["image1"] . "'>image1</a></td>
-                                <td><a href='" . $row["image2"] . "'>image1</a></td>
+                                <td><a href='" . $row["image2"] . "'>image2</a></td>
                             </tr>
                             ";
                         }
