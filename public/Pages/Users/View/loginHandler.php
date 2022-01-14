@@ -1,7 +1,8 @@
 <?php
 
     $username= $_POST["username"];
-    $password = $_POST["password"];
+    $password = mysqli_real_escape_string($con,$_POST["password"]); //sql injection protected
+   
 
     $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
     $db = mysqli_select_db($con,"luxdb") or die ("Error: Couldn't connect to Database");
