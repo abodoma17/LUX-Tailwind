@@ -59,35 +59,64 @@
                         <h1 class="text-4xl font-bold p-3 border-b-2 border-black mb-4 inline-block">Shopping Cart</h1>
                     </div>
                     <div class="flex flex-col gap-4">
-                        <div class="border-t-2 border-gray-400 pt-4 flex items-center">
-                            <div>
-                                <img src="../../../Shared/Images/accessories.jpg" alt="" class="h-24 inline rounded-lg">
-                            </div>
-                            <div class="md:w-96 w-screen">
-                                <p class="text-2xl font-nunito">Sphinx Pendant</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold text">50.00 EGP</p>
-                            </div>
-                        </div>
-                    
-                        <div class="border-t-2 border-gray-400 pt-4 flex items-center">
-                            <div>  
-                                <img src="../../../Shared/Images/papyrus3.jpg" alt="" class="h-24 inline rounded-lg">
-                            </div>
-                            <div class="md:w-96 w-screen">
-                                <p class="text-2xl font-nunito">Hieroglyphics Papyrus</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold text">50.00 EGP</p>
-                            </div>
-                        </div>
+                    <?php
+                        session_start();
+                        $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
+                        $db = mysqli_select_db($con,"luxdb") or die ("Error: Couldn't connect to Database");
+                        $total=0;
+                        $orderP = '';
+                        if(!(empty($_SESSION['cart'])))
+                        {
+                            foreach($_SESSION['cart'] as $id => $quantity)
+                            {
+                                
+                                $query = "SELECT * FROM products WHERE id=$id";
+                                $result = mysqli_query($con,$query);
+                                $row = mysqli_fetch_array($result);
+                                $image = $row["image1"];
+                                $name = $row["name"];
+                                $price = $row["price"];
+                                $price = intval($price)*intval($quantity);
+                                $total += $price;
+                                $orderP = $orderP . " ".$quantity."x $name";
+                                echo(
+                                    "
+                                    <div class='border-t-2 border-gray-400 pt-4 flex items-center'>
+                                            <div>
+                                            <img src='$image' alt='' class='w-96 md:w-32 inline rounded-lg'>
+                                            </div>
 
+                                            <div class='md:w-96 w-screen'>
+                                                <p class='text-2xl font-nunito'>".$quantity."x $name </p>
+                                            </div>
+
+                                            <div class='md:w-48 w-screen'>
+                                                <p class='font-semibold text-xl'>$price EGP</p>
+                                            </div>
+
+                                            <form method='GET' action='cartDelete.php?' class=''>
+                                                <input class='hidden' type='text' id='id' name='id' value='$id'>
+
+                                                <div class='md:w-48 w-screen flex justify-center'>
+                                                    <button type='submit'><img src='../../../Shared/Images/bin.png' alt='' class='w-9 md:w-8'></button>
+                                                </div>
+                                            </form>
+                                    </div>
+                                    
+                                    "
+                                );
+
+                            }
+                        }
+                        
+                        ?>
                     </div>
 
                     <div class="flex justify-end mt-10">
                         <div class="border-t-2 border-black font-bold">
-                            <p>Total: 100.00 EGP</p>
+                            <p>Total: <?php
+                            echo($total);
+                            ?> EGP</p>
                         </div>
                     </div>
                 </div>
@@ -95,25 +124,25 @@
         </div>
         
         <div class="flex h-screen justify-center items-center md:my-0 mx-16">
-            <div class="text-center bg-white text-black rounded-lg max-w-md"> 
+            <form method="GET" action="addOrder.php" class="text-center bg-white text-black rounded-lg max-w-md">
                 <div class="mx-10">
                     <img src="../../../Shared/Images/logo.png" alt="" class="w-1/3 mx-auto  mt-5">
                     <h1 class="text-4xl mt-5 mb-8 inline-block font-bold">Checkout</h1>
                     <div>
                         <label for="" class="float-left text-red-600 hidden" id="firstNameError">Name can not contain numbers.*</label> 
                     </div>
-                    <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="First Name" id="firstNameInput">
+                    <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="First Name" id="firstNameInput" name="fname">
                     <div>
                         <label for="" class="float-left text-red-600 hidden" id="lastNameError">Name can not contain numbers.*</label> 
                     </div>
-                    <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Last Name" id="lastNameInput">
+                    <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Last Name" name="lname" id="lastNameInput">
                     <div class="">
                         <div class="float-left flex items-center">
                             <p class="font-nunito font-semibold text-lg">City</p>
                             <select name="city" id="checkoutField" required class="block bg-gray-300 rounded-md p-2 text-gray-700 my-2 ml-4">
-                                <option value="cairo">Cairo</option>
-                                <option value="giza">Giza</option>
-                                <option value="alex">Alexandria</option>
+                                <option value="Cairo">Cairo</option>
+                                <option value="Giza">Giza</option>
+                                <option value="Alexandria">Alexandria</option>
                             </select>
                         </div>
                     </div>
@@ -122,18 +151,21 @@
                         
                     </div>
                     
-                    <input type="tel" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 mt-2" placeholder="Phone Number" id="phoneNum">
+                    <input type="tel" name="phone" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 mt-2" placeholder="Phone Number" id="phoneNum">
                     <div>
                         <label for="" id="emailError" class="float-left text-red-600 hidden">Email should be valid.*</label>
                     </div>
-                    <input type="email" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Email" id="emailInput"> 
-                    <input type="text" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Address">
+                    <input type="email" name="email" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Email" id="emailInput"> 
+                    <input type="text" name="address" class="block bg-gray-300 rounded-md p-2 w-80 text-gray-700 my-2" placeholder="Address">
                     
+                    <?php
+                    echo("<input class='hidden' type='text' id='total' name='total' value='$total'>");
+                    echo("<input class='hidden' type='text' id='orderP' name='orderP' value='$orderP'>");
+                    ?>
                     
-                    
-                    <a href="../../../index.php"><button class="bg-yellow-600 text-white w-3/4 py-2 rounded-sm my-4" id="checkoutButton">Checkout</button></a>
+                    <button class="bg-yellow-600 text-white w-3/4 py-2 rounded-sm my-4" id="checkoutButton" type="submit">Checkout</button>
                 </div>
-            </div>
+            </form>
           </div>
     </div>
 

@@ -81,14 +81,28 @@
                                     </select>
                                 </div>
 
-                                <button type='button' class='my-4 font-' style='background-color: #a48111;
+
+                                <form action='cartAdd.php?' method='GET'>
+
+                                <button type='submit' class='my-4 font-' style='background-color: #a48111;
                                 color: rgb(255, 255, 255);
                                 text-transform: uppercase;
                                 padding: 20px;
                                 border-radius: 10px;
                                 border: none;
                                 border-bottom: 6px solid #0002 ;
-                                font-weight: 700;'>Add to cart</button>  
+                                font-weight: 700;'>Add to cart</button>
+
+                                <select class='text-white bg-primary border-2 border-gray-500 p-1 ml-2' name='q'>
+                                        <option value='1'>1</option>
+                                        <option value='2'>2</option>
+                                        <option value='3'>3</option>
+                                </select>
+
+                                <input class='hidden' type='text' id='id' name='id' value='$id'>
+
+                                </form>
+                                
 
                                 <h5 class='text-l font-semibold mb-3 font-nunito'>" . $row["bg"] . "</h5>
                                 <h3 class='text-2xl border-b-2 inline font-serif' id=''>Dimensions:</h3>

@@ -10,7 +10,7 @@
     $image2 = $_POST["image2"];
 
     $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
-    $db = mysqli_select_db($con,"luxdb") or die ("Error: Couldn't connect to Database");;
+    $db = mysqli_select_db($con,"luxdb") or die ("Error: Couldn't connect to Database");
 
     $query = "INSERT INTO products(name,description,price,bg,weight,width,height,image1,image2,cID) value ('$nameInput','$descriptionInput','$priceInput','$bgInput','$weightInput','$widthInput','$heightInput','$image1input','$image2',4)";
 

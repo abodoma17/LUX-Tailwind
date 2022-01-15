@@ -48,9 +48,83 @@
             </div>
         </div>
 
-        <div class="w-full">
-            <img src="../../../Shared/Images/coming-soon.gif" class=" mx-auto my-5">
-            <div class="flex justify-center w-full mb-80 md:mb-0">
+        <div class="w-full mt-10">
+            <div class="flex justify-center">
+            <div class="text-center bg-white text-black rounded-lg w-11/12 md:w-1/2"> 
+                <div class="mx-10">
+                    <div class="">
+                        <h1 class="text-4xl font-bold p-3 border-b-2 border-black mb-4 inline-block">Shopping Cart</h1>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <?php
+                        session_start();
+                        $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
+                        $db = mysqli_select_db($con,"luxdb") or die ("Error: Couldn't connect to Database");
+                        $total=0;
+                        if(!(empty($_SESSION['cart'])))
+                        {
+                            foreach($_SESSION['cart'] as $id => $quantity)
+                        {
+                            
+                            $query = "SELECT * FROM products WHERE id=$id";
+                            $result = mysqli_query($con,$query);
+                            $row = mysqli_fetch_array($result);
+                            $image = $row["image1"];
+                            $name = $row["name"];
+                            $price = $row["price"];
+                            $price = intval($price)*intval($quantity);
+                            $total += $price;
+                            echo(
+                                "
+                                <div class='border-t-2 border-gray-400 pt-4 flex items-center'>
+                                        <div>
+                                        <img src='$image' alt='' class='w-96 md:w-32 inline rounded-lg'>
+                                        </div>
+
+                                        <div class='md:w-96 w-screen'>
+                                            <p class='text-2xl font-nunito'>".$quantity."x $name</p>
+                                        </div>
+
+                                        <div class='md:w-48 w-screen'>
+                                            <p class='font-semibold text-xl'>$price EGP</p>
+                                        </div>
+
+                                        <form method='GET' action='cartDelete.php?' class=''>
+                                            <input class='hidden' type='text' id='id' name='id' value='$id'>
+
+                                            <div class='md:w-48 w-screen flex justify-center'>
+                                                <button type='submit'><img src='../../../Shared/Images/bin.png' alt='' class='w-9 md:w-8'></button>
+                                            </div>
+                                        </form>
+                                </div>
+                                
+                                "
+                            );
+
+                        }
+                        }
+                        
+                        ?>
+                        
+                            
+
+                    </div>
+
+                    <div class="flex justify-end mt-10">
+                        <div class="border-t-2 border-black font-bold">
+                            <p>Total: <?php
+                            echo($total);
+                            ?> EGP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+
+
+
+
+            </div>
+            <div class="flex justify-center mb-80 md:mb-0 mt-10">
                 <a href="./checkout.php" class="">
                     <button type="button" class="" style="background-color: #a48111;
                     color: rgb(255, 255, 255);

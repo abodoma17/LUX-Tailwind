@@ -83,7 +83,7 @@
                         $con = mysqli_connect("localhost","root","") or die ("Error: Couldn't connect to srever");
                         $db = mysqli_select_db($con,"luxdb") or die ("Error: Couldn't connect to Database");;
 
-                        $viewOrders = "SELECT * FROM orders";
+                        $viewOrders = "SELECT * FROM orders ORDER BY oID DESC";
                         $result = mysqli_query($con,$viewOrders);
 
                         if(!$result){
