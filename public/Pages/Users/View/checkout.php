@@ -50,7 +50,7 @@
         </div>
     </div>
     
-    <div class="md:grid md:grid-cols-2">
+    <div class="lg:grid lg:grid-cols-2">
 
         <div class="md:flex h-screen justify-end items-center md:my-0 mx-16 hidden">
             <div class="text-center bg-white text-black rounded-lg"> 
